@@ -46,79 +46,89 @@
         </div>
       </template>
 
-      <template>
-        <div class="accordion" id="accordionExample">
+      <div class="accordion" id="accordion-template">
           <div class="accordion-item">
-            <h2 class="accordion-header" id="headingOne">
+            <h2 class="accordion-header" id="heading-comics">
               <button
-                class="accordion-button"
+                class="accordion-button collapsed"
                 type="button"
                 data-bs-toggle="collapse"
-                data-bs-target="#collapse1"
-                aria-expanded="true"
-                aria-controls="collapseOne"
+                data-bs-target="#collapse-comics"
+                aria-expanded="false"
+                aria-controls="collapse-comics"
               >
-                Accordion Item #1
+                Comics
               </button>
             </h2>
             <div
-              id="collapse1"
+              id="collapse-comics"
               class="accordion-collapse collapse"
-              aria-labelledby="headingOne"
+              aria-labelledby="heading-comics"
             >
               <div class="accordion-body">
-                This is the first item's accordion body.
+                <ul class="comics-list">
+                  <!-- Aquí van los cómics -->
+                </ul>
               </div>
             </div>
           </div>
+
           <div class="accordion-item">
-            <h2 class="accordion-header" id="headingOne">
+            <h2 class="accordion-header" id="heading-series">
               <button
-                class="accordion-button"
+                class="accordion-button collapsed"
                 type="button"
                 data-bs-toggle="collapse"
-                data-bs-target="#collapse2"
-                aria-expanded="true"
-                aria-controls="collapseOne"
+                data-bs-target="#collapse-series"
+                aria-expanded="false"
+                aria-controls="collapse-series"
               >
-                Accordion Item #1
+                Series
               </button>
             </h2>
             <div
-              id="collapse2"
+              id="collapse-series"
               class="accordion-collapse collapse"
-              aria-labelledby="headingOne"
+              aria-labelledby="heading-series"
             >
               <div class="accordion-body">
-                This is the first item's accordion body.
+                <ul class="series-list">
+                  <!-- Aquí van las series -->
+                </ul>
               </div>
             </div>
           </div>
+
           <div class="accordion-item">
-            <h2 class="accordion-header" id="headingOne">
+            <h2 class="accordion-header" id="heading-events">
               <button
-                class="accordion-button"
+                class="accordion-button collapsed"
                 type="button"
                 data-bs-toggle="collapse"
-                data-bs-target="#collapse3"
-                aria-expanded="true"
-                aria-controls="collapseOne"
+                data-bs-target="#collapse-events"
+                aria-expanded="false"
+                aria-controls="collapse-events"
               >
-                Accordion Item #1
+                Events
               </button>
             </h2>
             <div
-              id="collapse3"
+              id="collapse-events"
               class="accordion-collapse collapse"
-              aria-labelledby="headingOne"
+              aria-labelledby="heading-events"
             >
               <div class="accordion-body">
-                This is the first item's accordion body.
+                <ul class="events-list">
+                  <!-- Aquí van los eventos -->
+                </ul>
               </div>
             </div>
           </div>
         </div>
-      </template>
+      </div>
+    </div>
+  </div>
+</template>
     </main>
     <footer>
       <!-- place footer here -->
