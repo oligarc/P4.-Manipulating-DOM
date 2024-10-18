@@ -3,7 +3,7 @@
  * Write your own code in the procesarJSON function
  */
 
-fetch("./data/team.json")
+fetch("./data/heroes.json")
   .then((response) => {
     return response.json();
   })
@@ -13,9 +13,18 @@ fetch("./data/team.json")
   });
 
 
+
+const rowCards = document.querySelector("main .row")
+const rowCardsTemplate = document.querySelector("#card-template").content;
+
 function procesarJSON(jsondata) {
+    //Will use templates.
 
+    for (let char of jsondata.data.results) {
+        let newCard = rowCardsTemplate.cloneNode(true);
+        console.log(char);
+        newCard.querySelector(".card-img-top").src = char.thumbnail.path + "." + char.thumbnail.extension;
+        rowCards.append(newCard);
+    }
 
-
-    
 }
