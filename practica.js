@@ -32,12 +32,16 @@ for (let char of jsondata.data.results) {
     prueba.textContent = "MARVEL API doesn't provide any info";
   }
 
+  //To get to work a bs5 accordion you need to take the IDS
+
   let accordionComicsID = `comics-${uniqueID}`;
   let accordionSeriesID = `series-${uniqueID}`;
   let accordionEventsID = `events-${uniqueID}`;
 
-  newCard.querySelector(".accordion-button[data-bs-target='#collapse-comics']").setAttribute("data-bs-target", `#${accordionComicsID}`);
-  newCard.querySelector("#collapse-comics").setAttribute("id",accordionComicsID);
+  newCard.querySelector(".accordion-button[data-bs-target='#collapse-comics']").setAttribute("data-bs-target", `#${accordionComicsID}`); //Look for a selector that has the data-bs-target with that value
+                                                                                                                                         //And then change it to the uniqueID of the character
+  
+  newCard.querySelector("#collapse-comics").setAttribute("id",accordionComicsID);                                                        
 
   newCard.querySelector(".accordion-button[data-bs-target='#collapse-series']").setAttribute("data-bs-target", `#${accordionSeriesID}`);
   newCard.querySelector("#collapse-series").setAttribute("id",accordionSeriesID)
@@ -97,15 +101,7 @@ for (let char of jsondata.data.results) {
     eventsList.appendChild(li);
 
   }
-
-
-
-
-
-
   rowCards.append(newCard);
 }
-
-
 
 }
