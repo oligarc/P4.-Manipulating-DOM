@@ -32,6 +32,54 @@ function procesarJSON(jsondata) {
         "MARVEL API doesn't provide any info.";
     }
 
+    let comicList = newCard.querySelector(".comics-list");
+    if(char.comics.items.length>0){
+
+      for (let comic of char.comics.items) {
+        let li = document.createElement("li");
+        li.textContent = comic.name;
+        comicList.appendChild(li);
+      }
+
+    }else{
+      let li = document.createElement("li");
+      li.classList.add("no-info");
+      li.textContent = "No comics available";
+      comicList.appendChild(li);
+    }
+
+    let seriesList = newCard.querySelector(".series-list");
+
+    if(char.series.items.length>0){
+
+      for (let serie of char.series.items) {
+        let li = document.createElement("li");
+        li.textContent = serie.name;
+        seriesList.appendChild(li);
+      }
+
+    }else{
+      let li = document.createElement("li");
+      li.classList.add("no-info");
+      li.textContent = "No series available";
+      seriesList.appendChild(li);
+    }
+
+    let eventList = newCard.querySelector(".events-list");
+
+    if(char.events.items.length>0){
+      for (let events of char.events.items) {
+        let li = document.createElement("li");
+        li.textContent = events.name;
+        eventList.appendChild(li);
+      }
+    }else{
+      let li = document.createElement("li");
+      li.classList.add("no-info");
+      li.textContent = "No events available";
+      eventList.appendChild(li);
+    }
+
     //Continuar con comics,series y eventos en un acordeón.
     rowCards.append(newCard);
   }
