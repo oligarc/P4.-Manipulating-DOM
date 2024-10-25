@@ -32,8 +32,6 @@ function procesarJSON(jsondata) {
         "MARVEL API doesn't provide any info.";
     }
 
-    let comicList = newCard.querySelector(".comics-list");
-
     //Continuar con comics,series y eventos en un acordeón.
     rowCards.append(newCard);
   }
